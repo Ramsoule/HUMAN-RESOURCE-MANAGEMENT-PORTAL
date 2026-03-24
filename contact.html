@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — HR Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-logo">HR</div>
+    <div class="header-text">
+      <h1>Corporate HR Portal</h1>
+      <p>Human Resource Management</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a href="careers.html">Careers</a>
+    <a href="training.html">Training</a>
+    <a href="policies.html">Policies</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<div class="page-content">
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span>›</span> Contact HR
+  </div>
+
+  <div class="section-header">
+    <div class="label">Get in Touch</div>
+    <h2>Contact HR</h2>
+    <p>Have a question, concern, or need assistance? Our HR team is here to help. Reach out through any of the channels below.</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- CONTACT INFO -->
+    <div>
+      <div class="panel">
+        <div class="section-header" style="margin-bottom:24px;">
+          <div class="label">HR Office</div>
+          <h2 style="font-size:1.4rem;">Contact Details</h2>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Address</h4>
+            <p>HR Department, 3rd Floor<br>Corporate House, Kingsway<br>Maseru, Lesotho</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <p>+266 2231 0000</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>hr@corporateportal.co.ls</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Office Hours</h4>
+            <p>Monday – Friday: 8:00 AM – 5:00 PM<br>Saturday: 9:00 AM – 1:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAP -->
+      <div class="map-wrapper" style="margin-top:0;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.5!2d27.4833!3d-29.3167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDE5JzAwLjAiUyAyN8KwMjknMDAuMCJF!5e0!3m2!1sen!2sls!4v1680000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="HR Office Location">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="panel">
+      <div class="section-header" style="margin-bottom:28px;">
+        <div class="label">Send a Message</div>
+        <h2 style="font-size:1.4rem;">HR Enquiry Form</h2>
+        <p>Fill in the form and a member of our team will respond within 1–2 business days.</p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="e.g. Lesego">
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="e.g. Mokoena">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@company.co.ls">
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select id="department">
+          <option value="">— Select your department —</option>
+          <option>Human Resources</option>
+          <option>Finance</option>
+          <option>Technology</option>
+          <option>Marketing</option>
+          <option>Operations</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="e.g. Leave application query">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Describe your query or concern in detail…"></textarea>
+      </div>
+
+      <button class="btn-submit" onclick="handleSubmit()">Send Message</button>
+
+      <p style="font-size:0.82rem; color:var(--text-muted); margin-top:14px; text-align:center;">
+        Your information is handled in accordance with our <a href="policies.html" style="color:var(--blue);">Privacy Policy</a>.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">© 2026 Corporate HR Portal. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="policies.html">Privacy Policy</a>
+      <a href="policies.html">Code of Conduct</a>
+      <a href="contact.html">Support</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleSubmit() {
+  const name = document.getElementById('fname').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  if (!name || !email || !message) {
+    alert('Please fill in all required fields before submitting.');
+    return;
+  }
+  alert('Thank you, ' + name + '! Your message has been received. Our HR team will respond within 1–2 business days.');
+}
+</script>
+
+</body>
+</html>
